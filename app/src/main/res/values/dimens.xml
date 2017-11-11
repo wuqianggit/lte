@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources> <dimen name="activity_vertical_margin">10px</dimen>
+
+    <dimen name="activity_horizontal_margin">0px</dimen>
+
+    <dimen name="btn_width">30mm</dimen>
+
+    <dimen name="btn_height">10mm</dimen>
+
+</resources>

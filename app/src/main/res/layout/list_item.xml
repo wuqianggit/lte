@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/listitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffcccccc"
+        android:layout_margin="0dp">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffcc99"
+            android:layout_margin="0.5dp">
+            <TextView
+                android:text="Type:"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:id="@+id/tvCellType" />
+            <TextView
+                android:text="Tac:"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:id="@+id/tvTac" />
+            <TextView
+                android:text="CI:"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:id="@+id/tvCellId" />
+            <TextView
+                android:text="PCI/PSC:"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:id="@+id/tvPCI" />
+            <TextView
+                android:text="dBm:"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:id="@+id/tvhistorydBm" />
+            <TextView
+                android:text="asulevel:"
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:id="@+id/tvhistoryasuLevel" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

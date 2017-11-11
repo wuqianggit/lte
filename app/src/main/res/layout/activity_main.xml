@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.roger.lte.MainActivity">
+    <!--start-->
+    <LinearLayout
+        android:id="@+id/childlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_file_name"
+            android:hint="请输入文件名称"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click"
+            android:text="开始"
+            android:id="@+id/btn_on"
+            />
+        <!-- 显示最后文件保存的路径-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_file_path"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_cellInfo"
+            android:text="cellInfo"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="#ffcccccc">
+            <!-- line1 -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_margin="0.5dp"
+                android:background="#ffcccccc">
+
+                <TextView
+                    android:id="@+id/tvStaticInfoLable"
+                    android:layout_width="0.0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="General Information"></TextView>
+
+                <TextView
+                    android:id="@+id/tvTimeleaps"
+                    android:layout_width="0.0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="Time:"></TextView>
+            </TableRow>
+            <!--line2-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvOperaterName"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Operater:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvRatType"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="RatType:"
+                    android:textSize="12dp" />
+            </TableRow>
+            <!-- line3 -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tMnc"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="mnc"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvMcc"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="mcc:"
+                    android:textSize="12dp"></TextView>
+            </TableRow>
+            <!--line4-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvImsi"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Imsi"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvSdk"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="SDK:"
+                    android:textSize="12dp" />
+            </TableRow>
+            <!--line5-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvDeviceId"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="DeviceId"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvSerialNum"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0.5dp"
+                    android:layout_weight="1"
+                    android:text="SN:"
+                    android:textSize="12dp" />
+            </TableRow>
+            <!--line6-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvSoftware"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="software:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvModel"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0.5dp"
+                    android:layout_weight="1"
+                    android:text="Model:"
+                    android:textSize="12dp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="#ffcccccc">
+            <!--line6-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffcccccc">
+
+                <TextView
+                    android:id="@+id/tvStaticInfoLableInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Serving cell information"></TextView>
+            </TableRow>
+            <!-- title -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvCellType"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Rat:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvTac"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Tac:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCellId"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="CI:"
+                    android:textSize="12dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvRsrp"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Rsrp:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvRsrq"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Rsrq:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvSINR"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="SINR:"
+                    android:textSize="12dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvPCI"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="PCI/PSC:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCqi"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="CQI:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvGetCellType"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="type:"
+                    android:textSize="12dp" />
+            </TableRow>
+        </TableLayout>
+        <!-- history services cell info -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="#ffcccccc">
+
+            <TextView
+                android:id="@+id/tvStaticInfoLableHistory"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:text="History cells information:"></TextView>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="#ffffcc99">
+
+                <TextView
+                    android:id="@+id/tvhistoryCellType"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Type:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvhistoryTac"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Tac:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvhistoryCellId"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="CI:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvhistoryPCI"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="PCI/PSC:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvhistorydBm"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="dBm:"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvhistoryasuLevel"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="asulevel:"
+                    android:textSize="12dp" />
+            </TableRow>
+        </TableLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/historyrcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#ffff0000"
+            android:dividerHeight="10dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+</RelativeLayout>
