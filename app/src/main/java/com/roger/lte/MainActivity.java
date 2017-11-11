@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             super.handleMessage(msg);
         }
     };
-
     // for current
     public PhoneGeneralInfo phoneGeneralInfo;
     public CellGeneralInfo serverCellInfo;
