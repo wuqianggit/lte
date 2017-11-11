@@ -4,6 +4,7 @@ package com.roger.lte;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.media.MediaScannerConnection;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -34,6 +35,7 @@ import android.widget.Toast;
 
 import com.roger.lte.utils.FileWriteUtil;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -180,6 +182,10 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 Toast.makeText(getApplicationContext(),"系统写入成功，文件路径为:"+filePath,Toast.LENGTH_SHORT).show();
                 tvFilePath.setText("文件保存路径："+filePath);
+                /*扫描文件，防止USB连接电脑会找不到文件*/
+                File targetFile=new File(filePath);
+                MediaScannerConnection.scanFile(getApplicationContext(),new String[]{targetFile.getParentFile().getAbsolutePath(),targetFile.getAbsolutePath()},
+                        new String[]{"text/plain"},null);
             }
             smt.CELL_INFO_DATA.delete(0,smt.CELL_INFO_DATA.length());/*清空文件内容*/
             btnOn.setText("开始！");
